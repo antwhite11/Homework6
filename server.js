@@ -72,7 +72,7 @@ function weatherSearch(cityState) {
     $.ajax({
 
         method: "GET",
-        url: `http://api.openweathermap.org/data/2.5/weather?q=${cityState}&appid=6700dda73faa5661041d91bb8d92d431&units=imperial`,
+        url: `https://api.openweathermap.org/data/2.5/weather?q=${cityState}&appid=6700dda73faa5661041d91bb8d92d431&units=imperial`,
         dataType: "json",})
         .then(function (data) {
 
@@ -99,7 +99,7 @@ function weatherSearch(cityState) {
             var windSpeed = $("<p>").addClass("card-text").text(`Wind Speed: ${data.wind.speed} MPH`)
             var currentBody = $("<div>").addClass("card-body");
             var temperature = $("<p>").addClass("card-text").text(`Temperature: ${data.main.temp}F`)
-            var icon = $("<img>").attr("src", `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+            var icon = $("<img>").attr("src", `https://openweathermap.org/img/w/${data.weather[0].icon}.png`);
 
             header.append(icon)
            currentBody.append(header,hum, windSpeed,temperature);
@@ -131,7 +131,7 @@ function weatherSearch(cityState) {
 function fiveDay (cityState) {
 $.ajax({
     method: "GET",
-    url: `http://api.openweathermap.org/data/2.5/forecast?q=${cityState}&appid=6700dda73faa5661041d91bb8d92d431&units=imperial`,
+    url: `https://api.openweathermap.org/data/2.5/forecast?q=${cityState}&appid=6700dda73faa5661041d91bb8d92d431&units=imperial`,
     dataType: "json",
 
 
@@ -177,7 +177,7 @@ $.ajax({
 
 function uvIndex (lattitude,longitude) {
      $.ajax({
-        url: `http://api.openweathermap.org/data/2.5/uvi?appid=6700dda73faa5661041d91bb8d92d431&lat=${lattitude}&lon=${longitude}`,
+        url: `https://api.openweathermap.org/data/2.5/uvi?appid=6700dda73faa5661041d91bb8d92d431&lat=${lattitude}&lon=${longitude}`,
         method: "GET",
         dataType: "json",
         
