@@ -146,7 +146,7 @@ $.ajax({
 
     for (var i = 0; i < data.list.length; i++) {
 
-        if(data.list[i].dt_txt.indexOf("15:00:00")!== -1) {
+        if(data.list[i].dt_txt.indexOf("12:00:00")!== -1) {
 
             let column = $("<div>").addClass("col-md-2");
             let card = $("<div>").addClass("card bg-primary text-white");
