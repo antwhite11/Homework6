@@ -11,7 +11,7 @@ var location = "miami"
 
 $.ajax({
 method: "GET",
-url: `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=6700dda73faa5661041d91bb8d92d431&units=imperial`,
+url: `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=6700dda73faa5661041d91bb8d92d431&units=imperial`,
 dataType: "json",
 }).then(function(data) {
 
